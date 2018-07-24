@@ -2,7 +2,7 @@
  * @Author: wt 
  * @Date: 2018-07-16 10:35:33 
  * @Last Modified by: wt
- * @Last Modified time: 2018-07-23 17:41:09
+ * @Last Modified time: 2018-07-24 16:08:58
  */
 var webpack = require('webpack');// 22行有个webpack
 var extractTextPlugin = require('extract-text-webpack-plugin');//提取css单独打包
@@ -46,6 +46,7 @@ var config = {
     },
     resolve : {
         alias : {
+            node_modules: __dirname + '/node_modules',
             util: __dirname + '/src/util',
             page: __dirname + '/src/page',
             service: __dirname + '/src/service',
