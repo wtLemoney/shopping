@@ -38,6 +38,7 @@ var _base = {
     // 获取url参数
     getUrlParam : function(name){
         var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+        //数组的第 0 个元素存放的是匹配文本，而其余的元素存放的是与正则表达式的子表达式匹配的文本。
         var result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;
     },
