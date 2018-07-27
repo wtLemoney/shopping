@@ -2,7 +2,7 @@
  * @Author: wt 
  * @Date: 2018-07-16 10:35:33 
  * @Last Modified by: wt
- * @Last Modified time: 2018-07-25 16:55:24
+ * @Last Modified time: 2018-07-27 17:14:40
  */
 var webpack = require('webpack');// 22行有个webpack
 var extractTextPlugin = require('extract-text-webpack-plugin');//提取css单独打包
@@ -28,8 +28,8 @@ var config = {
     entry: {
         'common' : ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
         'index' : ['./src/page/index/index.js'],
-        'login' : ['./src/page/login/index.js'],
         'result' : ['./src/page/result/index.js'],
+        'user-login' : ['./src/page/user-login/index.js'],
     },
     output: {
         path: './dist',
@@ -65,6 +65,7 @@ var config = {
         // html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登陆')),
     ]
 }
 
